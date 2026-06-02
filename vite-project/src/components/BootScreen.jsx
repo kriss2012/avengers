@@ -7,10 +7,11 @@ const BootScreen = ({ onBoot }) => {
 
   const startBoot = () => {
     setLoading(true)
-    // Play sound immediately on interaction
-    const audio = new Audio('./sounds/assemble.mp3')
-    audio.volume = 1.0; // Set to full volume as requested
-    audio.play().catch(e => console.log('Audio playback failed:', e))
+    
+    // Play J.A.R.V.I.S. welcome sound immediately on interaction
+    const welcomeAudio = new Audio('./sounds/jarvis_welcome.mp3')
+    welcomeAudio.volume = 1.0 // Set to full volume as requested
+    welcomeAudio.play().catch(e => console.log('Welcome audio failed:', e))
 
     // Simulate high-tech loading sequence
     let current = 0
@@ -19,12 +20,19 @@ const BootScreen = ({ onBoot }) => {
       if (current >= 100) {
         current = 100
         clearInterval(interval)
+        
+        // Play the movie dialogue "Avengers... Assemble!" when decryption finishes
+        const assembleAudio = new Audio('./sounds/assemble.mp3')
+        assembleAudio.volume = 1.0 // Set to full volume as requested
+        assembleAudio.play().catch(e => console.log('Assemble audio failed:', e))
+        
+        // Wait for the dialogue to play before launching dashboard
         setTimeout(() => {
           onBoot()
-        }, 500)
+        }, 2200)
       }
       setProgress(current)
-    }, 30)
+    }, 45) // Slightly slower pacing to align with audio tracks
   }
 
   return (
