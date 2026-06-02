@@ -4,10 +4,10 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   transition: background 0.8s ease;
-  padding-top: 80px;
+  box-sizing: border-box;
 }
 
 .grid-overlay {
