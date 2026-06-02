@@ -64,8 +64,21 @@ avengers/
 
 ---
 
-## 📡 Automated Deployment
+## 📡 Deployment Methods
+
+### Option A: Automated CI/CD (GitHub Actions)
 This project is configured with a GitHub Actions workflow (`deploy.yml`). Any push to the `main` branch will automatically:
-1. Initialize the node compiler.
-2. Build the project distribution bundle with the correct base path.
-3. Push the build directory directly to the `gh-pages` branch.
+1. Build the production bundle.
+2. Publish to the `gh-pages` branch.
+
+*To use this, make sure **GitHub Actions** is selected as the source in your repository Settings -> Pages tab.*
+
+### Option B: Local CLI Deployment (`gh-pages`)
+Alternatively, you can deploy manually from your terminal:
+1. Make sure you are in the `vite-project` folder.
+2. Run the deployment command:
+   ```bash
+   npm run deploy
+   ```
+   *This automatically builds the project (`npm run build`) and pushes the `dist/` directory to the `gh-pages` branch on your remote origin.*
+   *To use this, make sure **Deploy from a branch** is selected as the source in your repository Settings -> Pages tab, pointing to the `gh-pages` branch.*
