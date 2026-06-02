@@ -1,4 +1,108 @@
-*{
+:root {
+  --font-hud: 'Orbitron', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+
+  /* Global Theme Colors */
+  --bg-primary: #040406;
+  --bg-secondary: #0a0a0f;
+  --bg-card: rgba(10, 10, 15, 0.6);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --glow-color: rgba(226, 60, 60, 0.4);
+  --primary-glow: 0 0 20px var(--glow-color);
+
+  /* Character specific colors (will be updated dynamically via styles) */
+  --c-theme: #e23c3c;
+  --c-theme-glow: rgba(226, 60, 60, 0.35);
+
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b0;
+  --text-muted: #62627a;
+
+  --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: all 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-theme);
+  box-shadow: 0 0 10px var(--c-theme-glow);
+}
+
+.hud-font {
+  font-family: var(--font-hud);
+  letter-spacing: 2px;
+}
+
+/* Stark Tech scanlines and grid overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 50% 50%, transparent 60%, rgba(0,0,0,0.85) 100%),
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.01), rgba(0, 255, 0, 0.005), rgba(0, 0, 255, 0.01));
+  background-size: 100% 100%, 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.45;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(6, 6, 10, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glow-border {
+  position: relative;
+}
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, var(--c-theme), transparent) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.3;
+  transition: var(--transition-smooth);
+}
+.glow-border:hover::after {
+  opacity: 1;
 }
