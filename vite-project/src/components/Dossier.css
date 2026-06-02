@@ -43,6 +43,35 @@
   margin-bottom: 20px;
 }
 
+.card-image-wrap::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--c-theme-glow) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.dossier-card:hover .card-image-wrap::before {
+  opacity: 0.8;
+  animation: hologram-scan 1.5s linear infinite;
+}
+
+@keyframes hologram-scan {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
 .card-image-wrap img {
   height: 95%;
   object-fit: contain;
