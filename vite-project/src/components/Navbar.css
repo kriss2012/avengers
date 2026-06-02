@@ -131,3 +131,61 @@
     display: none !important;
   }
 }
+
+.audio-widget-item {
+  display: flex;
+  align-items: center;
+}
+
+.audio-toggle-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.audio-toggle-btn:hover {
+  border-color: #e23c3c;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(226, 60, 60, 0.3);
+}
+
+.visualizer-bars {
+  display: flex;
+  align-items: flex-end;
+  height: 12px;
+  gap: 2px;
+  width: 14px;
+}
+
+.visualizer-bars .bar {
+  width: 2px;
+  background-color: #e23c3c;
+  border-radius: 1px;
+  animation: equalize 1.2s ease-in-out infinite alternate;
+}
+
+.visualizer-bars .b1 { animation-delay: 0.1s; height: 30%; }
+.visualizer-bars .b2 { animation-delay: 0.4s; height: 60%; }
+.visualizer-bars .b3 { animation-delay: 0.2s; height: 90%; }
+.visualizer-bars .b4 { animation-delay: 0.6s; height: 40%; }
+
+.muted-icon {
+  font-size: 12px;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+@keyframes equalize {
+  0% { height: 20%; }
+  100% { height: 100%; }
+}
