@@ -2,22 +2,31 @@ import React from 'react'
 import './Navbar.css'
 
 const Navbar = () => {
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
   return (
-    <nav className="navbar">
+    <nav className="navbar glass-panel">
+      <div className="hud-line-top"></div>
+      
       <ul className="nav-group left">
-        <li>Home</li>
-        <li>Characters</li>
-        <li>Movies</li>
+        <li className="hud-font" onClick={() => scrollTo('home')}>SYSTEM_HOME</li>
+        <li className="hud-font" onClick={() => scrollTo('dossiers')}>DOSSIERS</li>
       </ul>
 
-      <div className="logo">
+      <div className="logo" onClick={() => scrollTo('home')}>
         <img src='./images/logo.png' alt="Avengers Logo" />
       </div>
 
       <ul className="nav-group right">
-        <li>Series</li>
-        <li>Comics</li>
-        <li>Shop</li>
+        <li className="hud-font" onClick={() => scrollTo('movies')}>ARCHIVES</li>
+        <li className="hud-font status-indicator"><span className="pulse-dot"></span> SECURE_CONN</li>
       </ul>
     </nav>
   )
