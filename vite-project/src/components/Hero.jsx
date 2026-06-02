@@ -65,6 +65,87 @@ const slides = [
     image: './images/a3.png',
     themeColor: '#ef4444',
     number: '07'
+  },
+  {
+    title: 'DOCTOR STRANGE',
+    codename: 'STEPHEN STRANGE',
+    desc: `The Sorcerer Supreme and master of the mystic arts. Using magic, sling rings, and cosmic insight, Doctor Strange watches over the fabrics of reality, protecting the universe from unseen trans-dimensional evils.`,
+    bg: 'linear-gradient(135deg, #160601 0%, #300e02 50%, #010000 100%)',
+    image: './images/a8.png',
+    themeColor: '#c2410c',
+    number: '08'
+  },
+  {
+    title: 'BLACK PANTHER',
+    codename: "T'CHALLA",
+    desc: `The sovereign king and protector of Wakanda. Heart-shaped herb enhancements paired with a vibranium kinetic suit. A symbol of royalty, unity, and strength, guiding both his nation and the Avengers.`,
+    bg: 'linear-gradient(135deg, #040316 0%, #0b0933 50%, #010107 100%)',
+    image: './images/a9.png',
+    themeColor: '#6366f1',
+    number: '09'
+  },
+  {
+    title: 'ANT-MAN',
+    codename: 'SCOTT LANG',
+    desc: `A size-shifting hero operating in both micro and macro scales. Scott Lang utilizes Pym particles to bypass barriers, shrink, grow, and navigate the mysterious depths of the Quantum Realm.`,
+    bg: 'linear-gradient(135deg, #140400 0%, #2c0e02 50%, #020100 100%)',
+    image: './images/a10.png',
+    themeColor: '#ea580c',
+    number: '10'
+  },
+  {
+    title: 'CAPTAIN MARVEL',
+    codename: 'CAROL DANVERS',
+    desc: `A cosmic powerhouse with Tesseract energy. Able to fly through space at lightspeed and project destructive energy blasts, Carol Danvers stands as a final deterrent against galactic threats.`,
+    bg: 'linear-gradient(135deg, #1a0206 0%, #350611 50%, #020002 100%)',
+    image: './images/a11.png',
+    themeColor: '#e11d48',
+    number: '11'
+  },
+  {
+    title: 'NICK FURY',
+    codename: 'NICK FURY',
+    desc: `The tactical architect of the Avengers Initiative. Utilizing unmatched intelligence, strategic espionage, and state-of-the-art S.H.I.E.L.D. resources to protect the world from shadows.`,
+    bg: 'linear-gradient(135deg, #07090b 0%, #151b21 50%, #010203 100%)',
+    image: './images/a12.png',
+    themeColor: '#475569',
+    number: '12'
+  },
+  {
+    title: 'FALCON',
+    codename: 'SAM WILSON',
+    desc: `A brave combat veteran soaring with mechanical wings. Harnessing advanced Stark technology and a noble heart, he takes to the sky to defend the helpless and bear the legacy of Captain America.`,
+    bg: 'linear-gradient(135deg, #140202 0%, #2b0606 50%, #020000 100%)',
+    image: './images/a13.png',
+    themeColor: '#b91c1c',
+    number: '13'
+  },
+  {
+    title: 'WINTER SOLDIER',
+    codename: 'BUCKY BARNES',
+    desc: `A reformed super soldier with a vibranium arm. Forged in battle and brainwashed for espionage, Bucky Barnes now fights alongside the Avengers to clear his ledger and protect humanity.`,
+    bg: 'linear-gradient(135deg, #080a0c 0%, #1a2228 50%, #010203 100%)',
+    image: './images/a14.png',
+    themeColor: '#64748b',
+    number: '14'
+  },
+  {
+    title: 'SCARLET WITCH',
+    codename: 'WANDA MAXIMOFF',
+    desc: `An extremely powerful magic user wielding reality-warping Chaos Magic. Capable of telekinesis, mind manipulation, and energy blasts, her raw power remains unmatched and highly volatile.`,
+    bg: 'linear-gradient(135deg, #140202 0%, #2b0202 50%, #020000 100%)',
+    image: './images/a15.png',
+    themeColor: '#991b1b',
+    number: '15'
+  },
+  {
+    title: 'VISION',
+    codename: 'VISION',
+    desc: `A vibranium synthetic android powered by the Mind Stone. Combining advanced AI processing with molecular density control, Vision serves as an analytical protector of life on Earth.`,
+    bg: 'linear-gradient(135deg, #020c0a 0%, #082923 50%, #010302 100%)',
+    image: './images/a16.png',
+    themeColor: '#0f766e',
+    number: '16'
   }
 ]
 
