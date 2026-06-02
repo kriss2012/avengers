@@ -25,6 +25,17 @@ const movies = [
     desc: 'Tony Stark creates an artificial intelligence system named Ultron, which turns rogue and plans to eradicate humanity.'
   },
   {
+    title: 'CIVIL WAR',
+    year: '2016',
+    date: 'May 6, 2016',
+    director: 'Anthony & Joe Russo',
+    boxOffice: '$1.153 Billion',
+    trailer: 'https://www.youtube.com/watch?v=dKrVegVI0Us',
+    color: '#3b82f6',
+    code: 'DIVISION_2016',
+    desc: 'Political involvement in the Avengers\' affairs causes a rift between Captain America and Iron Man, dividing the team into opposing factions.'
+  },
+  {
     title: 'INFINITY WAR',
     year: '2018',
     date: 'April 27, 2018',
