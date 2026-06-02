@@ -11,6 +11,25 @@
   overflow: hidden;
 }
 
+.boot-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(226, 60, 60, 0.15);
+  box-shadow: 0 0 12px rgba(226, 60, 60, 0.4);
+  animation: grid-scan 4s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes grid-scan {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
 .boot-grid {
   position: absolute;
   inset: 0;
