@@ -1,0 +1,108 @@
+
+.hero {
+    height: 620px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    isolation: isolate; 
+
+  }
+  
+  .left-stack {
+    display: flex;
+    height: 100%;
+    flex-shrink: 0;
+  }
+ 
+  
+  .stack-image { 
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: all 0.6s ease;
+  }
+  
+  .stack-image img {
+ z-index: 3;   
+    height: 120%;
+    object-fit: contain;
+    opacity: 0.85;
+  }
+  
+  .main-slide {
+    height: 100%;
+    flex: 1;               
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 0 80px;
+    position: relative;
+    transition: all 0.6s ease;
+  }
+  
+  .hero-text {
+    color: white;
+    max-width: 420px;
+    z-index: 2;
+  }
+  
+  .hero-text h1 {
+    font-size: 56px;
+    margin-bottom: 16px;
+  }
+  
+  .hero-text p {
+    font-size: 20px;
+    line-height: 35px;
+    opacity: 0.9;
+  }
+  
+  .hero-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 160px;
+    top: -8%;
+  }
+  
+  .hero-image img {
+    height: 110%;
+
+    object-fit: contain;
+  }
+  
+  .arrow {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 48px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .stack-image img {
+  height: 98%;
+  object-fit: contain;
+}
+.hero::after {
+  content: 'AVENGERS';
+  position: absolute;
+  right: 10%;
+  bottom: 40%;
+  font-size: 180px;
+  font-weight: 800;
+  letter-spacing: 12px;
+  color: rgba(255,255,255,0.08);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: -1;
+}
