@@ -48,7 +48,7 @@
   grid-template-columns: 1.1fr 0.9fr;
   width: 100%;
   max-width: 1400px;
-  height: 100%;
+  height: calc(100% - 80px);
   padding: 0 60px;
   position: relative;
   z-index: 2;
