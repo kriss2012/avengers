@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({ isPlaying, toggleMusic }) => {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {
@@ -26,6 +26,21 @@ const Navbar = () => {
 
       <ul className="nav-group right">
         <li className="hud-font" onClick={() => scrollTo('movies')}>ARCHIVES</li>
+        <li className="hud-font audio-widget-item">
+          <button className="audio-toggle-btn hud-font" onClick={toggleMusic}>
+            {isPlaying ? (
+              <span className="visualizer-bars">
+                <span className="bar b1"></span>
+                <span className="bar b2"></span>
+                <span className="bar b3"></span>
+                <span className="bar b4"></span>
+              </span>
+            ) : (
+              <span className="muted-icon">🔇 </span>
+            )}
+            SYSTEM_AUDIO //
+          </button>
+        </li>
         <li className="hud-font status-indicator"><span className="pulse-dot"></span> SECURE_CONN</li>
       </ul>
     </nav>
