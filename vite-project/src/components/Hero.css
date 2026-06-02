@@ -332,3 +332,31 @@
     margin-bottom: 25px;
   }
 }
+
+@media (max-height: 720px) {
+  .hero-title {
+    font-size: 44px;
+    margin-bottom: 12px;
+  }
+  .codename-sub {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .divider-line {
+    margin-bottom: 15px;
+  }
+  .hero-desc {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  .action-btn {
+    padding: 10px 22px;
+  }
+  .slider-nav {
+    bottom: 25px;
+  }
+  .scroll-indicator {
+    bottom: 15px;
+  }
+}
