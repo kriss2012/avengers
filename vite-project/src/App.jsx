@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './App.css'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
@@ -8,14 +8,45 @@ import BootScreen from './components/BootScreen'
 
 function App() {
   const [isBooted, setIsBooted] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = useRef(null)
+
+  useEffect(() => {
+    // Initialize theme audio
+    audioRef.current = new Audio('./sounds/theme.mp3')
+    audioRef.current.loop = true
+    audioRef.current.volume = 0.4 // Set clear, ambient volume
+  }, [])
+
+  const handleBoot = () => {
+    setIsBooted(true)
+    // Start theme music right after Cap's assemble quote completes
+    if (audioRef.current) {
+      audioRef.current.play()
+        .then(() => setIsPlaying(true))
+        .catch(e => console.log('Theme music play failed:', e))
+    }
+  }
+
+  const toggleMusic = () => {
+    if (!audioRef.current) return
+    if (isPlaying) {
+      audioRef.current.pause()
+      setIsPlaying(false)
+    } else {
+      audioRef.current.play()
+        .then(() => setIsPlaying(true))
+        .catch(e => console.log('Theme music play failed:', e))
+    }
+  }
 
   return (
     <>
-      {!isBooted && <BootScreen onBoot={() => setIsBooted(true)} />}
+      {!isBooted && <BootScreen onBoot={handleBoot} />}
       
       {isBooted && (
         <>
-          <Navbar />
+          <Navbar isPlaying={isPlaying} toggleMusic={toggleMusic} />
           <Hero />
           <Dossier />
           <Movies />
