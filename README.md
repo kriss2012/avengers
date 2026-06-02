@@ -5,7 +5,7 @@ An immersive, high-fidelity Stark-Tech cinematic database portal featuring a dec
 ---
 
 ### 🌐 Live Deployment
-**🔗 Live Site URL:** [https://Krishnapatil2006.github.io/avengers/](https://Krishnapatil2006.github.io/avengers/)
+**🔗 Live Site URL:** [https://kriss2012.github.io/avengers/](https://kriss2012.github.io/avengers/)
 
 ---
 
