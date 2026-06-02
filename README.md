@@ -1,84 +1,139 @@
-# Avengers Stark-Tech Dossier Portal
+# 🛡️ Avengers Stark-Tech Dossier Portal
 
-An immersive, high-fidelity Stark-Tech cinematic database portal featuring a declassified 16-character Avengers roster, tactical power grids, and interactive holographic interface components.
+[![Vite Version](https://img.shields.io/badge/Vite-v7.3.0-00d2ff?style=for-the-badge&logo=vite)](https://vite.dev/)
+[![React Version](https://img.shields.io/badge/React-v19.0-61dafb?style=for-the-badge&logo=react)](https://react.dev/)
+[![Framer Motion](https://img.shields.io/badge/Framer--Motion-v12.2-e23c3c?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
+[![GitHub Pages](https://img.shields.io/badge/Live--Demo-Active-10b981?style=for-the-badge&logo=github)](https://kriss2012.github.io/avengers/)
+
+An immersive, high-fidelity Stark-Tech cinematic portal featuring the fully declassified 16-character Avengers roster, live system diagnostics, tactical grids, and responsive HUD styling.
 
 ---
 
 ### 🌐 Live Deployment
-**🔗 Live Site URL:** [https://kriss2012.github.io/avengers/](https://kriss2012.github.io/avengers/)
+**🔗 Access Portal:** [https://kriss2012.github.io/avengers/](https://kriss2012.github.io/avengers/)
 
 ---
 
-## 🚀 Key Features
-
-*   **S.H.I.E.L.D. Mainframe Boot Sequence**: Requires user interaction (`ACTIVATE_INTERFACE //`) to comply with browser autoplay audio standards, decrypting files in real-time.
-*   **Dual Sound Sequence**: Sequences J.A.R.V.I.S.'s AI boot dialogue *"Welcome home, sir"* followed by Captain America's iconic movie line *"Avengers... Assemble!"* at decryption completion.
-*   **Interactive 16-Character Roster**: Transparent movie renders for all core Avengers, including newly integrated high-quality assets for Falcon, Captain Marvel, and Vision.
-*   **Stark-Tech Diagnostics**: Dynamic visual elements such as a pulsing connection indicator, full-screen laser sweeps, and custom audio visualizer controls in the top bar.
-*   **Dynamic Holographic Scanlines**: Interactive hover states that trigger color-coded laser scanners matching each character's identity theme.
-*   **Tactical Power Grid**: Animated bar graphs detailing specific parameters (intelligence, strength, speed, durability, energy, and combat metrics).
-
----
-
-## 🛠️ Project Structure
+## 📟 S.H.I.E.L.D. Mainframe Console Welcome
 
 ```text
-avengers/
-├── .github/workflows/
-│   └── deploy.yml          # Automated CI/CD GitHub Pages workflow
-├── vite-project/
-│   ├── public/
-│   │   ├── images/         # Transparent PNG character renders
-│   │   └── sounds/         # Audio clips (Jarvis welcome & Assemble theme)
-│   ├── src/
-│   │   ├── components/     # React component HUD modules
-│   │   ├── App.jsx         # Root app wrapper & audio manager
-│   │   └── index.css       # Core typography and Stark design system tokens
-│   ├── vite.config.js      # Build config with dynamic base pathing
-│   └── package.json        # Project metadata & scripts
-└── README.md               # Main documentation portal
+====================================================================
+               S.H.I.E.L.D. SECURE PROTOCOL // ACCESS_GRANTED      
+====================================================================
+[INFO] INITIALIZING STARK-TECH PORTAL SYSTEM...
+[INFO] DECRYPTING DIRECTORIES...
+[OK]   16 Avenger Files Restored.
+[OK]   Ambient Soundtrack: https://kriss2012.github.io/avengers/
+====================================================================
 ```
 
 ---
 
-## 💻 Local Quickstart
+## 🚀 Key Cinematic Systems
 
-### Prerequisites
-*   **Node.js** (v18 or higher recommended)
-*   **npm** or **yarn**
+### 🔊 Dual Audio Boot Sequence
+Complying with web autoplay policies, the application gates the main interface behind a secure login terminal:
+1.  **System Initialization**: Clicking `ACTIVATE_INTERFACE //` instantly triggers the original AI voice of **J.A.R.V.I.S.** welcoming the user (*"Welcome home, sir"*).
+2.  **File Decryption Progress**: A custom percentage progress bar increments dynamically alongside a full-screen red laser scanner sweep.
+3.  **Command Confirmation**: As decryption reaches 100%, the official movie dialogue of **Captain America** (*"Avengers... Assemble!"*) plays at maximum volume, instantly opening the main tactical dashboard.
 
-### Installation
-1. Navigate into the project folder:
-   ```bash
-   cd vite-project
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server locally:
-   ```bash
-   npm run dev
-   ```
-4. Access the system at: `http://localhost:5173/`
+### 🎛️ Navbar Equalizer Widget
+*   Includes a persistent, clickable `SYSTEM_AUDIO //` toggle button in the top navigation panel.
+*   When active, an animated CSS equalizer bar widget simulates live soundtrack playback (`theme.mp3`) with random frequency fluctuations.
+
+### 📡 Holographic Laser Scanner
+*   Hovering over any personnel card triggers an active, sliding laser scanner overlay.
+*   The laser color automatically adapts to match the character's signature theme color.
 
 ---
 
-## 📡 Deployment Methods
+## 🗃️ Personnel Database Matrix (16 Core Members)
 
-### Option A: Automated CI/CD (GitHub Actions)
-This project is configured with a GitHub Actions workflow (`deploy.yml`). Any push to the `main` branch will automatically:
-1. Build the production bundle.
-2. Publish to the `gh-pages` branch.
+| Code Name | Real Name | Clearance Level | Tactical Status | Identity Color |
+| :--- | :--- | :--- | :--- | :--- |
+| **IRON MAN** | Tony Stark | Level 9 | `DECEASED // HEROIC_SACRIFICE` | 🔴 Red |
+| **CAPTAIN AMERICA** | Steve Rogers | Level 8 | `RETIRED // TIMELINE_DISPLACEMENT`| 🔵 Blue |
+| **THOR** | Thor Odinson | Class 10 // Cosmic | `ACTIVE // OFF-WORLD_DEVIATION` | 🌐 Cyan |
+| **HULK** | Bruce Banner | Level 8 | `ACTIVE // INTEGRATED_SYNAPSE` | 🟢 Green |
+| **BLACK WIDOW** | Natasha Romanoff | Level 9 | `DECEASED // VORMIR_EXCHANGE` | 💗 Magenta |
+| **HAWKEYE** | Clint Barton | Level 8 | `ACTIVE // SEMI-RETIRED` | 🟣 Purple |
+| **SPIDER-MAN** | Peter Parker | Level 7 | `ACTIVE // IDENTITY_RESTORED` | 🔴 Red |
+| **DOCTOR STRANGE** | Stephen Strange | Level 8 // Mystic | `ACTIVE // SANCTUM_PROTECTOR` | 🟠 Orange |
+| **BLACK PANTHER** | T'Challa | Level 9 // Sovereign | `DECEASED // SOUL_REALM` | 🟪 Indigo |
+| **ANT-MAN** | Scott Lang | Level 7 | `ACTIVE // QUANTUM_DIVERGENT` | 🟠 Dark Orange |
+| **CAPTAIN MARVEL** | Carol Danvers | Class 10 // Cosmic | `ACTIVE // DEEP-SPACE_ASSIGNMENT` | 🔴 Crimson |
+| **NICK FURY** | Nick Fury | Level 10 // Commander | `ACTIVE // SABER_COSMIC_STATION` | 🔘 Slate |
+| **FALCON** | Sam Wilson | Level 8 | `ACTIVE // CAPTAIN_AMERICA_LEGACY` | 🔴 Red |
+| **WINTER SOLDIER** | Bucky Barnes | Level 8 | `ACTIVE // REHABILITATED` | 🔘 Slate Gray |
+| **SCARLET WITCH** | Wanda Maximoff | Level 9 // Danger | `UNKNOWN // MOUNT_WUNDAGORE` | 🔴 Maroon |
+| **VISION** | Vision | Level 9 | `DECEASED // SYNAPSE_RECONSTRUCTION`| 🟢 Teal |
 
-*To use this, make sure **GitHub Actions** is selected as the source in your repository Settings -> Pages tab.*
+---
 
-### Option B: Local CLI Deployment (`gh-pages`)
-Alternatively, you can deploy manually from your terminal:
-1. Make sure you are in the `vite-project` folder.
-2. Run the deployment command:
-   ```bash
-   npm run deploy
-   ```
-   *This automatically builds the project (`npm run build`) and pushes the `dist/` directory to the `gh-pages` branch on your remote origin.*
-   *To use this, make sure **Deploy from a branch** is selected as the source in your repository Settings -> Pages tab, pointing to the `gh-pages` branch.*
+## 🛠️ Project Structure & Subdirectories
+
+```text
+avengers/
+├── .github/workflows/
+│   └── deploy.yml          # Automated GitHub Actions build pipeline
+├── vite-project/
+│   ├── public/
+│   │   ├── images/         # High-quality transparent character renders
+│   │   └── sounds/         # Movie dialogue & ambient audio files
+│   ├── src/
+│   │   ├── components/     # React component HUD modules
+│   │   │   ├── BootScreen  # Mainframe security portal & scanner
+│   │   │   ├── Dossier     # Personnel grid, metrics, and modals
+│   │   │   ├── Movies      # Mission logs & play transmissions
+│   │   │   └── Navbar      # Fixed navigation menu & equalizer toggle
+│   │   ├── App.jsx         # Global audio context & routing controller
+│   │   └── index.css       # Design token configurations & layouts
+│   ├── vite.config.js      # Production base path router config
+│   └── package.json        # Dependencies & scripts
+└── README.md               # Immersive Documentation File
+```
+
+---
+
+## 💻 Local Setup Guidelines
+
+### Setup Instructions
+1.  **Navigate to Workspace**:
+    ```bash
+    cd vite-project
+    ```
+2.  **Install Node Modules**:
+    ```bash
+    npm install
+    ```
+3.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+4.  **Local Testing**: Open your browser at `http://localhost:5173/`
+
+---
+
+## 📡 Deployment Workflows
+
+### Option A: Local Terminal Publish (Recommended)
+Compile the project and push the assets to the `gh-pages` branch on GitHub:
+```bash
+cd vite-project
+npm run deploy
+```
+*This triggers `npm run build` and automatically commits the build output to your repository branch.*
+
+### Option B: Automated Actions Integration
+A GitHub Actions workflow is preconfigured in `.github/workflows/deploy.yml` which deploys a new build to GitHub Pages on every `git push origin main`.
+
+---
+
+```text
+====================================================================
+[SECURITY DISCLAIMER]
+RESTRICTED FOR AUTHORIZED STARK INDUSTRIES PERSONNEL ONLY. 
+UNAUTHORIZED ATTEMPTS TO COPY OR EXTRACT CORE DATA FILES WILL TRIGGER
+J.A.R.V.I.S. FIREWALL DEFENSES.
+====================================================================
+```
